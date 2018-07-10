@@ -1,0 +1,12 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /boot
+
+name: 张三-test
+age: 18
+
+person:
+  name: 李四-test
+  age: 23
+content: "cupSize:${person.name}, age:${age}"

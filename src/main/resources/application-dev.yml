@@ -10,3 +10,6 @@ person:
   name: 李四-dev
   age: 23
 content: "cupSize:${person.name}, age:${age}"
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver

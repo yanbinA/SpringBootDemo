@@ -3,6 +3,7 @@ package com.yanbin.helloboot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,9 +30,9 @@ public class HelloController {
         return "Hello welcome StringBoot!";
     }
 
-    @RequestMapping(value = "/info")
-    public String info() {
-        return "name:" + name + ", age:" + age;
+    @RequestMapping(value = "/info/{id}")
+    public String info(@PathVariable("id") Integer value) {
+        return "name:" + name + ", age:" + age + ", id:" + value;
     }
 
     @RequestMapping(value = "person")
